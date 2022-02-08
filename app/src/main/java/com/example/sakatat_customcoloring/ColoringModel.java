@@ -1,10 +1,17 @@
+/*
+    @author: Tyler Sakata
+    This is the model class for the coloring assignment.
+    - Holds instance variables for the drawing, namely colors.
+ */
+
 package com.example.sakatat_customcoloring;
 
 import android.graphics.Color;
 
 public class ColoringModel
 {
-    private int topColor = 0xFFEE1515;
+    // instance colors
+    private int topColor = 0xFFFF0000;
     private int bottomColor = Color.WHITE;
     private int bandColor = Color.BLACK;
     private int buttonColor = Color.WHITE;
