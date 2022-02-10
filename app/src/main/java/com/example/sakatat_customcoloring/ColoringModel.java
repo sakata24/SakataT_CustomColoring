@@ -18,6 +18,7 @@ public class ColoringModel
     private int braceletColor = Color.GRAY;
     private int stoneColor = Color.GREEN;
 
+    // basic getters and setters.
     public int getTopColor() {
         return topColor;
     }

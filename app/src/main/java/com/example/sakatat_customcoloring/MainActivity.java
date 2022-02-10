@@ -14,10 +14,14 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
 {
-    // instance seekbars to be used outside of onCreate
+    // instance variables to be used outside of onCreate
     static SeekBar redSeekbar;
     static SeekBar greenSeekbar;
     static SeekBar blueSeekbar;
+
+    static TextView redVal;
+    static TextView greenVal;
+    static TextView blueVal;
 
     // "main" method
     @Override
@@ -41,13 +45,25 @@ public class MainActivity extends AppCompatActivity
         redSeekbar.setOnSeekBarChangeListener(colorController);
         greenSeekbar.setOnSeekBarChangeListener(colorController);
         blueSeekbar.setOnSeekBarChangeListener(colorController);
+        // create a reference to the textViews
+        redVal = findViewById(R.id.redVal);
+        greenVal = findViewById(R.id.greenVal);
+        blueVal = findViewById(R.id.blueVal);
+
     }
     // method to set the seekbars in here because we dont have a reference in the controller class
-    // whichBar is either 1 2 or 3
     public static void setSeekBars(int red, int green, int blue)
     {
         redSeekbar.setProgress(red);
         greenSeekbar.setProgress(green);
         blueSeekbar.setProgress(blue);
+        setSeekBarVal(red, green, blue);
+    }
+    // method to set the text that shows tha value of the seekbars
+    public static void setSeekBarVal(int red, int green, int blue)
+    {
+        redVal.setText(Integer.toString(red));
+        greenVal.setText(Integer.toString(green));
+        blueVal.setText(Integer.toString(blue));
     }
 }

@@ -168,6 +168,7 @@ public class EventController implements View.OnTouchListener, SeekBar.OnSeekBarC
             partB = i;
         }
         colorHandler(Color.rgb(partR, partG, partB));
+        MainActivity.setSeekBarVal(partR, partG, partB);
         coloringView.invalidate();
     }
 
